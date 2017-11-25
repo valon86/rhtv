@@ -1,3 +1,11 @@
+<?php 
+session_start();
+
+if(!isset($_SESSION['id'])){
+	header('location:login.php');
+	die();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,6 +83,9 @@
 						
 					</form><!--fin del formulario-->
 				</div>
+			</div>
+			<div class="row justify-content-start">
+			<a href="salir.php" class="btn btn-primary">Cerrar Sesion</a>				
 			</div>
 
 		</div><!--fin de card-body-->
